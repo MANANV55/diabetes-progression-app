@@ -1,0 +1,17 @@
+import os
+os.makedirs(".streamlit", exist_ok=True)
+
+with open(".streamlit/config.toml", "w") as f:
+    f.write("""
+[theme]
+primaryColor = "#00C9A7"
+backgroundColor = "#0E1117"
+secondaryBackgroundColor = "#1A1F2B"
+textColor = "#F5F5F7"
+font = "sans serif"
+
+[server]
+headless = true
+""")
+
+print("config.toml created ✅")
